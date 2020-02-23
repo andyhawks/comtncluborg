@@ -1,0 +1,80 @@
+@import "../dependencies/index";
+
+//
+// Teaser
+//
+details.teaser,
+fieldset.teaser {
+
+  .details-wrapper,
+  .fieldset-wrapper {
+    display: flex;
+  }
+
+  .field--name-field-teaser-media {
+    margin-right: $spacer;
+
+    details[open] {
+      border: 0;
+
+      summary[aria-expanded="true"] {
+        display: none;
+      }
+
+      .details-wrapper {
+        box-sizing: border-box;
+        padding: $spacer 0 0;
+      }
+    }
+  }
+
+  .field--name-field-teaser-text {
+    flex: 1;
+  }
+}
+
+//
+// Media preview wrapper
+//
+.media-preview {
+  display: flex;
+  align-items: center;
+
+  &__thumbnail {
+    flex: 0 0 auto;
+    margin-right: $spacer;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+
+    .field:not(:last-child) {
+      margin-bottom: $spacer/4;
+    }
+  }
+}
+
+//
+// Media preview for TheMAG & EM themes
+//
+.pd-preview {
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-thumb {
+    flex: 0 0 auto;
+    margin-right: $spacer;
+  }
+
+  &-content {
+    flex: 1 1 auto;
+
+    .field:not(:last-child) {
+      margin-bottom: $spacer/4;
+    }
+  }
+}
+

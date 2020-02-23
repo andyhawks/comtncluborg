@@ -1,9 +1,0 @@
-
-    "require": {
-        "thunder/thunder-distribution": "~3.4",
-    },
-    "config": {
-        "bin-dir": "bin/",
-        "sort-packages": true
-    }
-}

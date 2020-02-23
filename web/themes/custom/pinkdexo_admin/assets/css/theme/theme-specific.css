@@ -1,0 +1,68 @@
+details.teaser .details-wrapper,
+details.teaser .fieldset-wrapper,
+fieldset.teaser .details-wrapper,
+fieldset.teaser .fieldset-wrapper {
+  display: flex;
+}
+
+details.teaser .field--name-field-teaser-media,
+fieldset.teaser .field--name-field-teaser-media {
+  margin-right: 16px;
+}
+
+details.teaser .field--name-field-teaser-media details[open],
+fieldset.teaser .field--name-field-teaser-media details[open] {
+  border: 0;
+}
+
+details.teaser .field--name-field-teaser-media details[open] summary[aria-expanded="true"],
+fieldset.teaser .field--name-field-teaser-media details[open] summary[aria-expanded="true"] {
+  display: none;
+}
+
+details.teaser .field--name-field-teaser-media details[open] .details-wrapper,
+fieldset.teaser .field--name-field-teaser-media details[open] .details-wrapper {
+  box-sizing: border-box;
+  padding: 16px 0 0;
+}
+
+details.teaser .field--name-field-teaser-text,
+fieldset.teaser .field--name-field-teaser-text {
+  flex: 1;
+}
+
+.media-preview {
+  display: flex;
+  align-items: center;
+}
+
+.media-preview__thumbnail {
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+.media-preview__content {
+  flex: 1 1 auto;
+}
+
+.media-preview__content .field:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.pd-preview-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.pd-preview-thumb {
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+.pd-preview-content {
+  flex: 1 1 auto;
+}
+
+.pd-preview-content .field:not(:last-child) {
+  margin-bottom: 4px;
+}

@@ -11,25 +11,103 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "custom-asset/spectrum",
+                "version": "1.8.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/bgrins/spectrum/archive/1.8.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2.0"
+                }
+            }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "heiseonline/shariff",
+            "version": "3.0.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/heiseonline/shariff/releases/download/3.0.1/shariff-3.0.1.zip",
+              "type": "zip"
+            },
+            "require": {
+              "composer/installers": "^1.2.0"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "custom-asset/masonry",
+            "version": "3.3.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://npmcdn.com/masonry-layout@3.3.2/dist/masonry.pkgd.min.js",
+              "type": "file"
+            },
+            "require": {
+              "composer/installers": "^1.2.0"
+            }
+          }
         }
     ],
     "require": {
         "php": ">=7.2",
+        "bower-asset/jquery-simple-color": "^1.2",
         "composer/installers": "^1.2",
+        "custom-asset/masonry": "^3.3",
+        "custom-asset/spectrum": "^1.8",
         "cweagans/composer-patches": "^1.6.5",
+        "drupal/calendar": "1.x-dev",
+        "drupal/color_field": "^2.0",
+        "drupal/commerce": "^2.16",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.6.1",
         "drupal/core-composer-scaffold": "^8.8.1",
         "drupal/core-recommended": "^8.8.1",
+        "drupal/custom_pub": "^1.0@alpha",
+        "drupal/devel": "^2.1",
+        "drupal/entityqueue": "^1.0@beta",
+        "drupal/field_formatter": "^1.2",
+        "drupal/layout_library": "^1.0@beta",
+        "drupal/masonry": "^1.0@RC",
+        "drupal/masonry_views": "^1.0@RC",
+        "drupal/page_manager": "^4.0",
+        "drupal/panelizer": "^4.2",
+        "drupal/panels": "^4.4",
+        "drupal/poll": "^1.2",
+        "drupal/realname": "^1.0@RC",
+        "drupal/rng": "^1.7",
+        "drupal/rng_conflict": "^1.0@beta",
+        "drupal/rng_contact": "^1.0@beta",
+        "drupal/rng_date_scheduler": "^1.0@RC",
+        "drupal/rng_quick": "^1.1",
+        "drupal/slick_views": "^1.0",
+        "drupal/tb_megamenu": "1.x-dev",
+        "drupal/token": "^1.6",
+        "drupal/veoa": "^1.0",
+        "drupal/views_advanced_routing": "^1.0",
+        "drupal/views_infinite_scroll": "^1.5",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "^9.0|^10.0",
+        "heiseonline/shariff": "^3.0",
+        "npm-asset/imagesloaded": "^4.1",
         "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/drupal-integrations": "^8",
         "pantheon-systems/quicksilver-pushback": "^2",
         "rvtraveller/qs-composer-installer": "^1.1",
         "thunder/thunder-distribution": "~3.4",
         "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
@@ -55,6 +133,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
+        "psr-4": {
+          "DrupalProject\\composer\\": "scripts/composer/"
+        },
         "classmap": ["scripts/composer/ScriptHandler.php"],
         "files": ["load.environment.php"]
     },
@@ -73,6 +154,12 @@
         "unit-test": "echo 'No unit test step defined.'",
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
         "post-install-cmd": [
             "@drupal-scaffold",
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
@@ -88,6 +175,29 @@
     "extra": {
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/core": {
+                "3045171: Form blocks rendered inside layout builder break save": "https://www.drupal.org/files/issues/2019-06-27/3045171-66.patch",
+                "3062742: Drag-and-drop reordering doesn't work if the region content is nested in other elements": "https://www.drupal.org/files/issues/2019-11-21/3062742_4.patch",
+                "2834346: Contextual links double trigger": "https://www.drupal.org/files/issues/2019-11-15/drupal-contextual_links_double_trigger-2834346-19.patch"
+            },
+            "drupal/page_manager": {
+                "2752227: Incorrect page_title title in browser toolbar": "https://www.drupal.org/files/issues/2018-10-26/page_manager-incorrect-page_title-2752227-37-8.x.4.x.patch"
+            },
+            "drupal/panels": {
+                "2869412: Page title does not display": "https://www.drupal.org/files/issues/2018-03-19/panels--page_title_does_not_display--2869412-27.patch",
+                "2824632: Changes to Layout not being saved": "https://www.drupal.org/files/issues/2018-08-28/panels-fix_updating_layout-2824632-16-D8.patch"
+            },
+            "drupal/poll": {
+                "2331515: Allow to show the poll question in the vote/result templates": "https://www.drupal.org/files/issues/2019-03-15/question-title-is-displayed-as-block-title-2923946-8.x-1.x-dev-7.patch"
+            },
+            "drupal/mailchimp": {
+                "2936099: Notice: Undefined property: stdClass::$size in mailchimp_insert_drupal_form_tag()": "https://www.drupal.org/files/issues/2018-06-07/suppress-size-notice-2936099-6.patch"
+            },
+            "drupal/tb_megamenu": {
+                "2921195: Missing array keys cause notices": "https://www.drupal.org/files/issues/missing_array_keys-2921195-3.patch"
+            }
+        },
         "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
             "web/core": ["type:drupal-core"],

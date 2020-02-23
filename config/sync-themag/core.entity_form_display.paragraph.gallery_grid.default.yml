@@ -1,0 +1,29 @@
+uuid: 9f748e96-90f0-4dc9-80f6-3534a880728d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_grid.field_media
+    - paragraphs.paragraphs_type.gallery_grid
+  module:
+    - inline_entity_form
+id: paragraph.gallery_grid.default
+targetEntityType: paragraph
+bundle: gallery_grid
+mode: default
+content:
+  field_media:
+    weight: 0
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Gallery
+      label_plural: Galleries
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+hidden:
+  created: true
+  status: true
