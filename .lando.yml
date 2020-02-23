@@ -1,0 +1,15 @@
+name: comtncluborg
+recipe: pantheon
+config:
+  framework: drupal8
+  site: comtncluborg
+  id: 9c5c683f-55f0-4d19-93b6-ab0fe7fe87c3
+  webroot: web
+  xdebug: false
+  index: false
+  edge: false
+  cache: false
+  conf:
+    php: php.ini
+
+    
