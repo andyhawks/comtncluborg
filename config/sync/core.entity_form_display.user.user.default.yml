@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_account_name
     - field.field.user.user.field_facebook
     - field.field.user.user.field_google_plus
@@ -181,6 +182,8 @@ content:
     weight: 21
     region: content
 hidden:
+  commerce_remote_id: true
+  customer_profiles: true
   langcode: true
   language: true
   layout_builder__layout: true

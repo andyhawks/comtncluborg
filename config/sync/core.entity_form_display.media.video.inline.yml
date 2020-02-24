@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.inline
+    - field.field.media.video.field_author
     - field.field.media.video.field_caption
     - field.field.media.video.field_copyright
     - field.field.media.video.field_description
@@ -111,6 +112,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_author: true
   field_caption: true
   langcode: true
   moderation_state: true

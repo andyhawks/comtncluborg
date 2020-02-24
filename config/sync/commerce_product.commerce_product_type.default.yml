@@ -1,0 +1,12 @@
+uuid: 8c414ece-fc0d-467f-8172-17301982aa86
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: Default
+description: ''
+variationType: default
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

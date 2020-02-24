@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_account_name
     - field.field.user.user.field_facebook
     - field.field.user.user.field_google_plus
@@ -30,7 +31,9 @@ content:
     weight: 6
     region: content
 hidden:
+  commerce_remote_id: true
   contact: true
+  customer_profiles: true
   field_account_name: true
   field_facebook: true
   field_google_plus: true

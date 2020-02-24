@@ -9,13 +9,17 @@ label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access content'
   - 'access user profiles'
   - 'access_unpublished node article'
   - 'cancel account'
   - 'change own username'
+  - 'manage own commerce_payment_method'
   - 'search content'
   - 'use text format basic_html'
+  - 'view commerce_product'
   - 'view media'
+  - 'view own commerce_order'
   - 'view published terms in channel'
   - 'view published terms in tags'

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.full
+    - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_account_name
     - field.field.user.user.field_facebook
     - field.field.user.user.field_google_plus
@@ -125,6 +126,8 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  commerce_remote_id: true
+  customer_profiles: true
   field_account_name: true
   field_facebook: true
   field_google_plus: true

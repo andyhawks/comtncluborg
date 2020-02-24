@@ -72,6 +72,7 @@
         "drupal/commerce": "^2.16",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
+        "drupal/config_split": "^1.4",
         "drupal/console": "^1.6.1",
         "drupal/consumers": "^1.9",
         "drupal/core-composer-scaffold": "^8.8.1",

@@ -1,5 +1,6 @@
 module:
   access_unpublished: 0
+  address: 0
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
@@ -9,16 +10,35 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  calendar: 0
+  calendar_datetime: 0
+  captcha: 0
   checklistapi: 0
   ckeditor: 0
+  coffee: 0
+  color: 0
   color_field: 0
   comment: 0
+  commerce: 0
+  commerce_cart: 0
+  commerce_checkout: 0
+  commerce_number_pattern: 0
+  commerce_order: 0
+  commerce_payment: 0
+  commerce_price: 0
+  commerce_product: 0
+  commerce_promotion: 0
+  commerce_store: 0
+  commerce_tax: 0
   config: 0
+  config_filter: 0
   config_selector: 0
+  config_split: 0
   config_update: 0
   content_lock: 0
   content_moderation: 0
   contextual: 0
+  courier: 0
   crop: 0
   ctools: 0
   ctools_block: 0
@@ -29,6 +49,7 @@ module:
   diff: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
+  dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
   empty_fields: 0
@@ -38,15 +59,21 @@ module:
   entity_reference: 0
   entity_reference_revisions: 0
   entityqueue: 0
+  environment_indicator: 0
   field: 0
   field_formatter: 0
   field_group: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   focal_point: 0
   hal: 0
+  honeypot: 0
   image: 0
+  image_effects: 0
   inline_entity_form: 0
   inline_form_errors: 0
   language: 0
@@ -68,20 +95,39 @@ module:
   metatag_facebook: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  moderation_dashboard: 0
+  moderation_sidebar: 0
+  module_filter: 0
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  panels: 0
   paragraphs_features: 0
   path: 0
   path_alias: 0
+  pdf_api: 0
+  permissions_filter: 0
   poll: 0
+  printable: 0
+  profile: 0
+  qa_accounts: 0
   realname: 0
+  recaptcha: 0
   redirect: 0
+  reroute_email: 0
   responsive_image: 0
   responsive_preview: 0
+  rng: 0
+  rng_conflict: 0
+  rng_contact: 0
+  rng_date_scheduler: 0
+  rng_quick: 0
+  rng_views: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
   search: 0
+  seckit: 0
   select2: 0
   serialization: 0
   shariff: 0
@@ -89,25 +135,34 @@ module:
   slick: 0
   slick_media: 0
   slick_views: 0
+  stage_file_proxy: 0
+  state_machine: 0
   statistics: 0
   system: 0
   taxonomy: 0
   tb_megamenu: 0
   text: 0
+  themag_commerce_field_group: 0
   themag_layouts: 0
   themag_thunder_default_content: 0
+  themag_thunder_demo: 0
   thunder_article: 0
   thunder_media: 0
   thunder_paragraphs: 0
   thunder_taxonomy: 0
   token: 0
   toolbar: 0
+  unlimited_number: 0
   update: 0
   update_helper: 0
   update_helper_checklist: 0
   user: 0
+  veoa: 0
+  views_advanced_routing: 0
   views_infinite_scroll: 0
+  views_templates: 0
   views_ui: 0
+  webform: 0
   workflows: 0
   menu_link_content: 1
   pathauto: 1

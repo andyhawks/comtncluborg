@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video.field_author
     - field.field.media.video.field_caption
     - field.field.media.video.field_copyright
     - field.field.media.video.field_description
@@ -124,6 +125,7 @@ content:
       autocomplete: true
     third_party_settings: {  }
 hidden:
+  field_author: true
   langcode: true
   moderation_state: true
   path: true
